@@ -1,0 +1,20 @@
+.--text {
+    &-backdrop {
+        position: relative;
+
+        &::after {
+            background: var(--color-black-500);
+            bottom: 50%;
+            content: "";
+            filter: blur(100px);
+            height: 160%;
+            opacity: .32;
+            pointer-events: none;
+            position: absolute;
+            right: 50%;
+            transform: translate(50%,50%);
+            width: 80%;
+            z-index: -1;
+        }
+    }
+}

@@ -11,7 +11,7 @@ if (process.env.REPORT_COVERAGE) {
 }
 
 
-let { mainnet, ropsten } = require('./secrets.json');
+let { goerli } = require('./secrets.json');
 
 
 /**
@@ -20,8 +20,8 @@ let { mainnet, ropsten } = require('./secrets.json');
 module.exports = {
     etherscan: {
         apiKey: {
-            mainnet: mainnet.etherscan,
-            ropsten: ropsten.etherscan
+            // mainnet: mainnet.etherscan,
+            goerli: goerli.etherscan
         }
     },
     gasReporter: {
@@ -30,13 +30,13 @@ module.exports = {
         showTimeSpent: true,
     },
     networks: {
-        mainnet: {
-            url: mainnet.url,
-            accounts: [mainnet.privateKey]
-        },
-        ropsten: {
-            url: ropsten.url,
-            accounts: [ropsten.privateKey]
+        // mainnet: {
+        //     url: mainnet.url,
+        //     accounts: [mainnet.privateKey]
+        // },
+        goerli: {
+            url: goerli.url,
+            accounts: [goerli.privateKey]
         }
     },
     plugins: ['solidity-coverage'],

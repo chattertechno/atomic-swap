@@ -1,0 +1,13 @@
+@use '@esportsplus/ui/lib';
+
+$color: (
+    primary: (
+        300: var(--color-blue-300),
+        400: var(--color-blue-400),
+        500: var(--color-blue-500)
+    )
+);
+
+body {
+    @include lib.css-variables(color, $color);
+}
